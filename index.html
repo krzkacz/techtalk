@@ -1,1 +1,97 @@
-<h1>Hello</h1>
+<!doctype html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+		<title>Intro to Mobile Automation</title>
+
+		<link rel="stylesheet" href="css/reveal.css">
+		<link rel="stylesheet" href="css/theme/black.css">
+
+		<!-- Theme used for syntax highlighting of code -->
+		<link rel="stylesheet" href="lib/css/league.css">
+
+		<!-- Printing and PDF exports -->
+		<script>
+			var link = document.createElement( 'link' );
+			link.rel = 'stylesheet';
+			link.type = 'text/css';
+			link.href = window.location.search.match( /print-pdf/gi ) ? 'css/print/pdf.css' : 'css/print/paper.css';
+			document.getElementsByTagName( 'head' )[0].appendChild( link );
+		</script>
+	</head>
+	<body>
+		<div class="reveal">
+			<div class="slides">
+				<section>
+					<h1>Intro to Mobile Automation</h1>
+
+					<!--<aside class="notes">
+						This is an example aside
+					</aside>-->-->
+				</section>
+				<section>
+					<h2>Who am I?</h2>
+					<p>Krzysztof Kaczmarek<br>
+					  Software Engineer at Capgemini</p>
+				</section>
+				<section data-background="/img/question.png" data-background-size="512px">
+					<h2>What the heck is he doing here?</h2>
+
+						<!--<aside class="notes">
+							Przypuszczam, kilka osób zadało sobie to pytanie - co ja tutaj właściwie robię. Skoro nie jestem testerem, nie mam doświadczenia w testowanium to czy w takim razie powinienm tutaj być.
+						</aside>-->
+				</section>
+				<section data-background="/img/thatsallfolks.jpg" data-background-size="1900px" data-transition="convex">
+					<!--<img src="/img/thats_all_folks.jpg" style="border: 0px; width: 1200px;"><br><br>-->
+				</section>
+			</div>
+		</div>
+
+		<script src="lib/js/head.min.js"></script>
+		<script src="js/reveal.js"></script>
+
+		<script>
+			// More info https://github.com/hakimel/reveal.js#configuration
+			Reveal.initialize({
+				history: true,
+				// More info https://github.com/hakimel/reveal.js#dependencies
+				dependencies: [
+					{ src: 'plugin/chart/Chart.min.js' },
+					{ src: 'plugin/chart/csv2chart.js' },
+					{ src: 'plugin/markdown/marked.js' },
+					{ src: 'plugin/markdown/markdown.js' },
+					{ src: 'plugin/notes/notes.js', async: true },
+					{ src: 'plugin/highlight/highlight.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } }
+				],
+				chart: {
+					defaults: {
+						global: {
+							title: {
+								fontColor: "#FFF" },
+							legend: {
+								display: false,
+								position: "right",
+								labels: { fontColor: "#FFF",
+										  fontSize: 20,
+										  fontStyle: "bold" },
+							},
+							tooltips: {
+								labels: { fontColor: "#FFF" },
+							},
+						},
+						options : {
+							responsive: true,
+							animation:{
+            					animateScale:true
+							}
+						}
+					},
+
+					bar: { backgroundColor: [["rgba(136,170,0,0.8)", "rgba(56,132,153,0.8)", "rgba(255,204,0,0.8)", "rgba(255,42,42,0.8)", "rgba(0,51,128,0.8)"] ]},
+				}
+			});
+		</script>
+	</body>
+</html>
