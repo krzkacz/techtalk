@@ -240,6 +240,86 @@
 				<!-- Slide -->
 				<section>
 							<section>
+			          <h2>Tools</h2>
+			        </section>
+							<!-- Slide -->
+							<section>
+								<img src="img/espresso.png" style="background-color: transparent; border:none; width: 200px; box-shadow:none; vertical-align:middle; margin:20px">
+								<img src="img/robotium_logo.png" style="background-color: transparent; border:none; width: 200px; box-shadow:none; vertical-align:middle; margin:20px">
+								<h4>UIAutomator</h4>
+								<!--<aside class="notes">
+									Android. Narzedzia oparte o Instrumentation Api Androida. Robotium uzywane na poczatku nawet przez Google bo bylo wygodniejsze
+									od stockowej implementacji. Nie zapewnialo jednak wszystkiego czego panowie z Google oczekiwali (glownie chodzilo o
+									niezawodnosc i wygode pisania testow). Espresso ma mniesze API (obsluguje Hamcresta), zapewnia lepsza synchronizacje z UI (nie wymaga
+									sleepow ktore	z zasady sa brzydkie i niestabilne). Espresso jest ograniczone do automatyzowanej aplikacji i nie ma dostepu do np.
+									UI systemu takigo jak dialogi, belka itp. Tu pojawia sie UI Automator (API 18+ 4.3) ktory te rzeczy jest w stanie obsluzyc
+									i mozna go laczyc z Espresso bez problemu. Ma UIAutomatorViwer do podgladania aktualnie wyswietlanych elementow i goglnie bardziej
+									nadaje sie do Black Boxowych testow.
+								</aside>-->
+			        </section>
+							<!-- Slide -->
+							<section>
+								<img src="img/xctest_logo.png" style="background-color: transparent; border:none; width: 200px; box-shadow:none; vertical-align:middle; margin:10px">
+			          <img src="img/uiautomation-icon.png" style="background-color: transparent; border:none; width: 200px; box-shadow:none; vertical-align:middle; margin:10px">
+								<!--<aside class="notes">
+									iOS. XCUITest jest w pewnym sesie nastepca UIAutomation (nazwa ludzaco podobna do UI Automatora z Androida)
+									XCUITest to kombinacja frameworkow XCTest i Accesibility ktory zapewnia obsloge interakcji z UI. XCUITest dziala na iOS 9+
+									ale nie jest to specjalny problem biorac pod uwage wykres ktory pokazywalem wczesniej gdzie udzial systemow ponizej 9 jest
+									na poziomie kolo 3%. Testy pisane w Swifcie a nie w JavaScripcie. XCUITest zapewnia latwiejsza obsluge
+									alertow, latwiejsze generowanie testow z nagrywarki, lepsza synchronizacje i jest generalnie szybsze niz UIAutomation.
+									UIAutomation jest deprecated od XCode 7? Jest tez KIF czy EarlGrey(rozwijany przez Google) ktore sa frameworkami bazujacymi
+									na XCTest (bo musza)
+								</aside>-->
+							</section>
+							<!-- Slide -->
+							<section>
+								<img src="img/appium_logo.png" style="background-color: transparent; border:none; width: 200px; box-shadow:none; vertical-align:middle; margin:10px">
+								<img src="img/calabash_logo.png" style="background-color: transparent; border:none; width: 200px; box-shadow:none; vertical-align:middle; margin:10px">
+								<img src="img/seetest_logo.png" style="background-color: transparent; border:none; width: 200px; box-shadow:none; vertical-align:middle; margin:10px">
+								<!--<aside class="notes">
+								Frameworki ktore beda nas najbardziej interesowac czyli crossplatformowe.
+
+								Calabash - opensourceowy framework oparty o idee BDD, obslugije zarowno natywne jak i hybrydowe i webowe apki.
+								testy piszemy w Cucumberze/Gherkinie. Ma spora baze gotowych stepow z ktorych mozemy poskladac podstawowe testy. Nowe stepy mozemy
+								dopisywac w Ruby. Jego popularnosc wynika glownie z tego ze pozwala osobom malo technicznym pisac testy bo baza wbudowanych stepow pokrywa
+								sporo funkcjonalnosci i jesli nie potrzebujemy bardzo zaawansowanych metod nigdy nwaet nie napiszemy linijki kodu. Pod maska Clabash opiera
+								sie na serwerze HTTP ktory jest instalowany na urzadzeniu obok apki (na Androidzie) albo wkompilowywany bezposrednio w aplikacje na iOs.
+								Serwer jest wlasciwie wrapperem na Robotium w przypadku Androida, na iOs zapewnia komunikacje z UIAutomation. Niestety w przypadku iOS
+								musimy miec dostep do kodu albo specjalnie przygotowane .pod. Na Androidzie wystarczy apk. Calabash nie jest juz aktywnie rozwijany
+								i ma "umiarkowanie" aktywne community. Zainteresowanym polecam wejsc na githuba projektu jest tam calkiem niezle readme
+
+								Appium - wisienka na torcie, mozna powiedziec ze standard do ktorego porownywane sa inne frameworki. Jego niewatpliwa zaleta jest
+								to, ze jesli umiemy sie poruszac w Selenium - mozemy z marszu zaczac automatyzowac w Appium. Appium opiera sie na tym samym koncepcie
+								 - WebDriver, architektura klient - serwer z klientami dostepnymi dla wszystkich popularnych jezykow (Ruby, Python, Java, JavaScript,
+								 PHP, C#) + server Appium  w Node.js. Klient wysyla restowe zapytanie do serwera (JSON Wire), serwer tlumaczy je na natywne komendy
+								 dla danej platformy (UI Automation alb UI Automator/Selendroid), wyniki wracaja ta sama droga do nas. Zamiast selenium grida mamy Appium grid
+								 czyli ten sam koncept w wydaniu mobile. W takiego grida mozemy wpinac emulatory albo przwdziwe urzadzenia z tym ze jeden Mac
+								 moze obslugiwac jedno urzadzenie (takie ograniczenie platformy). Dzieki temu tez Appium bardzo latwo integruje sie z chmura bo
+								 wystarczy wpisac adres zewnetrznego Grida i to wlasciwie tyle. Appium moze automatyzowac zarowno natywne jak i hybrydowe plikacje.
+								 Jest opensourcowy, ma calkiem aktywne community. Nie potrzebujemy kodu aplikacji zeby automatyzowac, wystarczy pod/apk.
+
+								 SeeTest - honorable mention, platny (i to calkiem slono). W zalozeniach bardzo podobny do Appium ma kilka ficzerow ktorych brakuje w
+								 w Appium jak np rozpoznawanie tkstu i obrazu "out of the box" gdzie w Appium musimy sobie to sami dopisac z uzywajaca zewnetrznych
+								 bibliotek. Oferuje podobne rozwiazania jak Appium - prywatny/publiczny cloud bardzo podobny do grida, dowolnosc wyboru frameworka
+								 testowego ale ograniczony do Javy
+								</aside>-->
+						  </section>
+							<!-- Slide -->
+							<section>
+			          <img src="img/tools-trend-alpha.png" style="background-color: transparent; border:none; width: 1600px; box-shadow:none; vertical-align:middle; margin:10px">
+								<!--<aside class="notes">
+									W takim razie w czym automatyzowac? Odpowiedz brzmi jak zwykle "to zalezy".To jest wykres z tego roku pokazujacy
+									z jakich frameworkow korzystali uzytkownicy chmury BitBara. Jak widac lwia czesc dla obu platform stanowi Appium+Calabash
+									(w okolicach 50% z wyrazna przewaga Appium). Na podstawie tego czy nasza apka jest dostepna na obu platformach czy tylko
+									na wybranej, czy interesuja nas bardziej testy blackboxowe czy whiteboxowe, jak bardzo komfortowo czujemy sie w danym jezyku
+									programowania itp. Ja polecam pobawic sie Appium - jest duzo materialow na ten temat w necie, z instrukcjami ktok po kroku jak
+									skonfigurowac srodowisko, gotowe instalacje w Dokerze, StackOverflow pomoze
+								</aside>-->
+							</section>
+				</section>
+				<!-- Slide -->
+				<section>
+							<section>
 								<h2>Real Device<br> vs <br>Emulator</h2>
 							</section>
 							<!--<aside class="notes">
@@ -280,7 +360,9 @@
 									Emulator to tylko emulator. Wyniki beda sie w mniejszym lub wiekszym stopniu pokrywaly z tym jak nasza aplikacja zachowa sie na prawdziwym
 									urzadzeniu. Wiekszosc urzadzen sprzedawanych obecnie ma nakladki producentow a nie czystego androida, dziwne domyslne aplikacje, rozne sterowniki
 									do wbudowanych sensorow, kamery, maja lub nie maja zewnetrznej karty sd trudno jest okreslic czy te same testy przejda jesli wykonamy je
-									na przwdziwych urzadzeniach. Poza tym na emulatorze nie przetestujemy wydajnosci aplikacji czy temperatury pod obciazeniem
+									na przwdziwych urzadzeniach. Poza tym na emulatorze nie przetestujemy wydajnosci aplikacji czy temperatury pod obciazeniem.
+
+									Anegdota o Bydgoszczy
 									</aside>-->
 								  </div>
 
@@ -370,86 +452,6 @@
 								<img src="img/cloud/experitest.png" style="background-color: transparent; border:none; width: 160px; box-shadow:none; vertical-align:middle; margin:10px">
 								<!--<aside class="notes">
 								Experitest Device Lab - jest trial na 10 godzin na dostep do labu, obsluguje Appium i ich framework.
-								</aside>-->
-							</section>
-				</section>
-				<!-- Slide -->
-				<section>
-							<section>
-			          <h2>Tools</h2>
-			        </section>
-							<!-- Slide -->
-							<section>
-								<img src="img/espresso.png" style="background-color: transparent; border:none; width: 200px; box-shadow:none; vertical-align:middle; margin:20px">
-								<img src="img/robotium_logo.png" style="background-color: transparent; border:none; width: 200px; box-shadow:none; vertical-align:middle; margin:20px">
-								<h4>UIAutomator</h4>
-								<!--<aside class="notes">
-									Android. Narzedzia oparte o Instrumentation Api Androida. Robotium uzywane na poczatku nawet przez Google bo bylo wygodniejsze
-									od stockowej implementacji. Nie zapewnialo jednak wszystkiego czego panowie z Google oczekiwali (glownie chodzilo o
-									niezawodnosc i wygode pisania testow). Espresso ma mniesze API (obsluguje Hamcresta), zapewnia lepsza synchronizacje z UI (nie wymaga
-									sleepow ktore	z zasady sa brzydkie i niestabilne). Espresso jest ograniczone do automatyzowanej aplikacji i nie ma dostepu do np.
-									UI systemu takigo jak dialogi, belka itp. Tu pojawia sie UI Automator (API 18+ 4.3) ktory te rzeczy jest w stanie obsluzyc
-									i mozna go laczyc z Espresso bez problemu. Ma UIAutomatorViwer do podgladania aktualnie wyswietlanych elementow i goglnie bardziej
-									nadaje sie do Black Boxowych testow.
-								</aside>-->
-			        </section>
-							<!-- Slide -->
-							<section>
-								<img src="img/xctest_logo.png" style="background-color: transparent; border:none; width: 200px; box-shadow:none; vertical-align:middle; margin:10px">
-			          <img src="img/uiautomation-icon.png" style="background-color: transparent; border:none; width: 200px; box-shadow:none; vertical-align:middle; margin:10px">
-								<!--<aside class="notes">
-									iOS. XCUITest jest w pewnym sesie nastepca UIAutomation (nazwa ludzaco podobna do UI Automatora z Androida)
-									XCUITest to kombinacja frameworkow XCTest i Accesibility ktory zapewnia obsloge interakcji z UI. XCUITest dziala na iOS 9+
-									ale nie jest to specjalny problem biorac pod uwage wykres ktory pokazywalem wczesniej gdzie udzial systemow ponizej 9 jest
-									na poziomie kolo 3%. Testy pisane w Swifcie a nie w JavaScripcie. XCUITest zapewnia latwiejsza obsluge
-									alertow, latwiejsze generowanie testow z nagrywarki, lepsza synchronizacje i jest generalnie szybsze niz UIAutomation.
-									UIAutomation jest deprecated od XCode 7? Jest tez KIF czy EarlGrey(rozwijany przez Google) ktore sa frameworkami bazujacymi
-									na XCTest (bo musza)
-								</aside>-->
-							</section>
-							<!-- Slide -->
-							<section>
-								<img src="img/appium_logo.png" style="background-color: transparent; border:none; width: 200px; box-shadow:none; vertical-align:middle; margin:10px">
-								<img src="img/calabash_logo.png" style="background-color: transparent; border:none; width: 200px; box-shadow:none; vertical-align:middle; margin:10px">
-								<img src="img/seetest_logo.png" style="background-color: transparent; border:none; width: 200px; box-shadow:none; vertical-align:middle; margin:10px">
-								<!--<aside class="notes">
-								Frameworki ktore beda nas najbardziej interesowac czyli crossplatformowe.
-
-								Calabash - opensourceowy framework oparty o idee BDD, obslugije zarowno natywne jak i hybrydowe i webowe apki.
-								testy piszemy w Cucumberze/Gherkinie. Ma spora baze gotowych stepow z ktorych mozemy poskladac podstawowe testy. Nowe stepy mozemy
-								dopisywac w Ruby. Jego popularnosc wynika glownie z tego ze pozwala osobom malo technicznym pisac testy bo baza wbudowanych stepow pokrywa
-								sporo funkcjonalnosci i jesli nie potrzebujemy bardzo zaawansowanych metod nigdy nwaet nie napiszemy linijki kodu. Pod maska Clabash opiera
-								sie na serwerze HTTP ktory jest instalowany na urzadzeniu obok apki (na Androidzie) albo wkompilowywany bezposrednio w aplikacje na iOs.
-								Serwer jest wlasciwie wrapperem na Robotium w przypadku Androida, na iOs zapewnia komunikacje z UIAutomation. Niestety w przypadku iOS
-								musimy miec dostep do kodu albo specjalnie przygotowane .pod. Na Androidzie wystarczy apk. Calabash nie jest juz aktywnie rozwijany
-								i ma "umiarkowanie" aktywne community. Zainteresowanym polecam wejsc na githuba projektu jest tam calkiem niezle readme
-
-								Appium - wisienka na torcie, mozna powiedziec ze standard do ktorego porownywane sa inne frameworki. Jego niewatpliwa zaleta jest
-								to, ze jesli umiemy sie poruszac w Selenium - mozemy z marszu zaczac automatyzowac w Appium. Appium opiera sie na tym samym koncepcie
-								 - WebDriver, architektura klient - serwer z klientami dostepnymi dla wszystkich popularnych jezykow (Ruby, Python, Java, JavaScript,
-								 PHP, C#) + server Appium  w Node.js. Klient wysyla restowe zapytanie do serwera (JSON Wire), serwer tlumaczy je na natywne komendy
-								 dla danej platformy (UI Automation alb UI Automator/Selendroid), wyniki wracaja ta sama droga do nas. Zamiast selenium grida mamy Appium grid
-								 czyli ten sam koncept w wydaniu mobile. W takiego grida mozemy wpinac emulatory albo przwdziwe urzadzenia z tym ze jeden Mac
-								 moze obslugiwac jedno urzadzenie (takie ograniczenie platformy). Dzieki temu tez Appium bardzo latwo integruje sie z chmura bo
-								 wystarczy wpisac adres zewnetrznego Grida i to wlasciwie tyle. Appium moze automatyzowac zarowno natywne jak i hybrydowe plikacje.
-								 Jest opensourcowy, ma calkiem aktywne community. Nie potrzebujemy kodu aplikacji zeby automatyzowac, wystarczy pod/apk.
-
-								 SeeTest - honorable mention, platny (i to calkiem slono). W zalozeniach bardzo podobny do Appium ma kilka ficzerow ktorych brakuje w
-								 w Appium jak np rozpoznawanie tkstu i obrazu "out of the box" gdzie w Appium musimy sobie to sami dopisac z uzywajaca zewnetrznych
-								 bibliotek. Oferuje podobne rozwiazania jak Appium - prywatny/publiczny cloud bardzo podobny do grida, dowolnosc wyboru frameworka
-								 testowego ale ograniczony do Javy
-								</aside>-->
-						  </section>
-							<!-- Slide -->
-							<section>
-			          <img src="img/tools-trend-alpha.png" style="background-color: transparent; border:none; width: 1600px; box-shadow:none; vertical-align:middle; margin:10px">
-								<!--<aside class="notes">
-									W takim razie w czym automatyzowac? Odpowiedz brzmi jak zwykle "to zalezy".To jest wykres z tego roku pokazujacy
-									z jakich frameworkow korzystali uzytkownicy chmury BitBara. Jak widac lwia czesc dla obu platform stanowi Appium+Calabash
-									(w okolicach 50% z wyrazna przewaga Appium). Na podstawie tego czy nasza apka jest dostepna na obu platformach czy tylko
-									na wybranej, czy interesuja nas bardziej testy blackboxowe czy whiteboxowe, jak bardzo komfortowo czujemy sie w danym jezyku
-									programowania itp. Ja polecam pobawic sie Appium - jest duzo materialow na ten temat w necie, z instrukcjami ktok po kroku jak
-									skonfigurowac srodowisko, gotowe instalacje w Dokerze, StackOverflow pomoze
 								</aside>-->
 							</section>
 				</section>
