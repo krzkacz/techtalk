@@ -25,14 +25,6 @@
 			<div class="slides">
         <!-- Slide -->
 				<section>
-					<h1>Intro to Mobile Automation</h1>
-
-					<!--<aside class="notes">
-						This is an example aside
-					</aside>-->
-				</section>
-        <!-- Slide -->
-				<section>
 					<h2>Who am I?</h2>
 					<h3>Krzysztof Kaczmarek</h3>
 					<p>Software Engineer at <img src="img/capgemini_logo.png"
@@ -47,13 +39,35 @@
             DevOps
           </p>
 				</section>
-        <!-- Slide -->
-        <section>
-          <h2>Agenda</h2>
-        </section>
+				<!-- Slide -->
+				<section>
+					<h1>Intro to Mobile Automation</h1>
+					<!--<aside class="notes">
+					Opowiemy sobie o tym jaka jest specyfika testowania alikacji mobilnych, czemu testowanie i automatyzacja w przypadku
+					mobilek jest taka wazna, czym testowanie mobilek rozni sie od testowania webowki i na jakie aspekty aplikacji
+					nalezy zwrocic uwage, nie koniecznie w takiej kolejnosci. Przedstawie kilka narzedzi do automatyzacji testow,
+					i powiem gdzie mozemy nasza apke przetestowac a na koniec odpowiem na wasze pytania jesli jakies beda i jesli bede w stanie.
+					</aside>-->
+				</section>
 				<!-- Slide -->
 				<section>
           <h2>Web Testing<br> vs<br> Mobile Testing</h2>
+					<!--<aside class="notes">
+					Czym roznie sie testowanie i automatyzacja aplikacji mobilnych o aplikacji webowych? Naturalnym srodowiskiem zycia aplikacji
+					webowej jest przgladarka. Przegladarka zazwyczaj zainstalowana jest na komputerze klasy PC albo na urzadzeniu przenosnym. Za
+					wyswietlanie naszej aplikacji odpowiedzialny jest silnik przegladarki i mozemy zalozyc ze na tej samej przegladarce na roznych
+					urzadzeniach aplikacja bedzie sie zachowywala tak samo. Do wyboru mamy przegladarki oparte o chromium czyli Chrom i Opera,
+					Firefoxa, IE i Safari. Moze jeszcze Edge jasli ktos ma ochote. Oczywiscie jest jeszcze masa przegladarek krzakow ale one nikogo nie
+					obchodza. Na 1 maszynie mozemy uruchomic tyle przegladarek ile fabryka dala, puscic testy rownolegle i przetestowane. Potrzbujemy
+					tak na prawde 1 PC i 1 Maca zeby miec dobre pokrycie. Nasza aplikacja moze korzystac z kamery albo glosnikow i to by bylo na tyle.
+
+					Teraz wchodzi aplikacja mobilna, hybrydowa, crossplatformowa. Korzystajaca z GPS, zyroskopu, barometru, wysokosciomierza,
+					2 kamer, czujnika swiatla i bluetootha. Dostepna do pobrania w minute przez tysiace uzytkownikow na setki mozliwych urzadzen z
+					roznymi wersjami systemu operacyjnego, rozdzielczoscia ekranu, OEMowym firmwarem. Moze dzialac zarowno online jak i offline, jej odbiorcami
+					sa ludzie o czasie skupienia uwagi wynoszacym 10 sekund majacy jednoczesnie otwartych 15 innych aplikacji wysylajacych alerty. W miedzyczasie
+					dzwoni telefon i przychodza 2 maile ktore maja priorytet nad nasza aplikacja a na boku wlaczyla sie aktualizacja systemu. Powodzenia.
+					Przyda ci sie.
+					</aside>-->
         </section>
 				<!-- Slide -->
 				<section>
@@ -61,58 +75,100 @@
 					<img src="img/negative/download.jpg" style="background-color: transparent; border:none; width: 400px; box-shadow:none">
 					<img src="img/negative/neg1.png" style="background-color: transparent; border:none; width: 400px; box-shadow:none">
 					<img src="img/negative/very-bad.jpg" style="background-color: transparent; border:none; width: 400px; box-shadow:none">
+					<!--<aside class="notes">
+					No to moze jesli jest tak zle i tak trudno to moze nie przetestujemy czasci aplikacji? Przeciez nikt sie nie dowie. Nie polecam.
+					Oczywiscie internet jest pelen trolli i ludzi sprzedajacych komentarze. Aplikcja z 5 gwiazdkami nie musi byc dobra. Aplikacja z 2 nie musi
+					byc tragiczna. Jednak jesli pierwsze co widzimy po wejsciu na strone aplikacji to 100 komentarzy o tym ze wywala do ekranu startowego
+					zaraz po uruchomieniu nie zacheca do pobrania. I o ile jestesmy gigantem a nasza apka jest niezastapiona to moze ujsc nam na sucho
+					24 tysiace jedynek tak jak Applowi na zalaczonym obrazku, to juz jesli jestesmy startupem ktory cala swoja przyszlosc opiera na
+					sukcesie TEJ jedynej, innowacyjnej i przelomowej gry mobilnej nie mozemy sobie na to pozwolic.
+					</aside>-->
         </section>
 				<!-- Slide -->
 				<section>
 							<section>
 			          <h2>What should we test?</h2>
+								<!--<aside class="notes">
+								Co w takim razie powinnismy przetestowac? Jak ulozyc plan testowania zeby uwzglednic wszystko. Co zautomatyzowac zeby
+								sie nie wykonczyc?
+								</aside>-->
 			        </section>
 							<!-- Slide -->
 							<section>
 			          <h2>Localization</h2>
+								<!--<aside class="notes">
+								</aside>-->
 								<h2>Date</h2>
+								<!--<aside class="notes">
+								</aside>-->
 								<h2>Time</h2>
+								<!--<aside class="notes">
+								</aside>-->
 			        </section>
 							<!-- Slide -->
 							<section>
 			          <h2>Networking</h2>
+								<!--<aside class="notes">
+								</aside>-->
 			        </section>
 							<!-- Slide -->
 							<section>
 			          <h2>Behavior under stress</h2>
+								<!--<aside class="notes">
+								</aside>-->
 			        </section>
 							<!-- Slide -->
 							<section>
 			          <h2>Interruptions</h2>
+								<!--<aside class="notes">
+								</aside>-->
 			        </section>
 							<!-- Slide -->
 							<section>
 			          <h2>Security</h2>
+								<!--<aside class="notes">
+								</aside>-->
 			        </section>
 							<!-- Slide -->
 							<section>
 			          <h2>Performance</h2>
+								<!--<aside class="notes">
+								</aside>-->
 			        </section>
 							<!-- Slide -->
 							<section>
 			          <h2>Usability</h2>
+								<!--<aside class="notes">
+								</aside>-->
 			        </section>
 							<!-- Slide -->
 							<section>
 			          <h3>Resolution</h3>
+								<!--<aside class="notes">
+								</aside>-->
 								<h3>Orientation</h3>
+								<!--<aside class="notes">
+								</aside>-->
 								<h3>Sensors</h3>
+								<!--<aside class="notes">
+								</aside>-->
 								<h3>Certification</h3>
+								<!--<aside class="notes">
+								</aside>-->
 			        </section>
 							<!-- Slide -->
 							<section>
 			          <h2>And probably a thousand other things...</h2>
+								<!--<aside class="notes">
+								</aside>-->
 			        </section>
 				</section>
 				<!-- Slide -->
 				<section>
 							<section>
 			          <h2>Fragmentation</h2>
+								<!--<aside class="notes">
+								</aside>-->
 			        </section>
 							<!-- Slide -->
 							<section>
@@ -120,14 +176,20 @@
 									In our report last year we saw 18,796.
 									In 2013 we saw 11,868.</i></h3>
 									<h3 align="right">OPENSIGNAL, 2015</h3>
+									<!--<aside class="notes">
+									</aside>-->
 			        </section>
 							<!-- Slide -->
 							<section>
 			          <img src="img/chart.png" style="background-color: transparent; border:none; width: 800px; box-shadow:none">
+								<!--<aside class="notes">
+								</aside>-->
 			        </section>
 							<!-- Slide -->
 							<section>
 			          <img src="img/ios_fragmentation2.png" style="background-color: transparent; border:none; width: 400px; box-shadow:none">
+								<!--<aside class="notes">
+								</aside>-->
 			        </section>
 				</section>
 				<!-- Slide -->
@@ -135,15 +197,46 @@
 							<section>
 								<h2>Real Device<br> vs <br>Emulator</h2>
 							</section>
+							<!--<aside class="notes">
+							Wybralismy juz narzedzie ktorym bedziemy automatyzowac nasze testy. Teraz fajnie by bylo napisac jakies testy i jakos je wykonac.
+							Mamy wlascie 2 opcje (tak na prawde to 3 ale o ty pozniej). Albo emulator, albo prawdziwe urzadzenie. Albo oba. Znowu pojawia sie magiczne
+							"to zalezy". Na jakim etapie pracy jestesmy? Co chcemy przetestowac? Ile mamy pieniedzy? I tak dalej.
+							</aside>-->
 							<section>
 
 								<div style="text-align: left; float: left;">
 									<h3>✓ cost</h3>
+									<!--<aside class="notes">
+									Emulatory sa tanie. Mozna nawet powiedziec ze darmowe jesli nie uwzglednimy czasu potrzebnego na ich konfiguracje i maintenance.
+									Emozemy sobie takich profili emulatora utworzyc ile nam sie podoba, w kazdym mozliwym smaku, rozmiarze ekranu, z procesorem
+									x86, ARM, z wersja systemu jaka nam sie podoba.
+									</aside>-->
 									<h3>✓ availability</h3>
+									<!--<aside class="notes">
+									Kiedy mamy juz gotowe profile mozemy sobie taki emulator uruchomic 1 kliknieciem i gotowe. Nie musimy sie o niego bic z 15 innymi
+									testerami i developerami. Nie obchodzi nas ze telefon sie wylaczyl a my nie znamy pinu, ze kolega go zamknal na kluczw szufladzie
+									albo ze jest rozladowany. Moze sie to wydawac smieszne ale z doswiadczenia wiem ze nawet jesli mamy 3 razy wiecej telefonow nic testerow
+									i tak na preawde dostepnych bedzie ich tyle ze dla kogos zabraknie.
+									</aside>-->
 									<h3><br></h3>
 									<h3>✗/✓ performance</h3>
+									<!--<aside class="notes">
+									Tu sprawa ma sie roznie w zaleznosci od rodzaju maszyny na ktorej pracujemy i tej ktora testujemy. W przypadku iOS tak na prawde nie mamy
+									do czynienia z emulatorem tylko z symulatorem. Glowna roznica jest to, ze symulator nie eamuluje warstwy sprzetowej wiec wszystkie
+									polecenia wykonywane sa bezposrednio przez procesor naszego Maca co zdecydowanie kozystnie wplywa na wydajnosc. Z androidem jest mniej rozowo.
+									Jesli mamy procesor intela HAXM (Hardware Accelerated Execution Manager czyli sprzetowe wsparcie wirtualizacji) - jest OK. Z tym ze
+									HAXM przyspiesza nasz emulator tylko jesli uzywamy obrazow x86. Jesli chcemy obraz oparty o ARMa jestesmy skazani na pelna softwareowa
+									wirtualizacje ktora potrafi byc niemilosierni wolna. Poza domyslnum AVD sa tez dostepne inne emulatory Androida takie jak np Genymotion
+									ale zazwyczaj trzeba za nie zaplacic.
+									</aside>-->
 									<h3><br></h3>
 									<h3>✗ reliability</h3>
+									<!--<aside class="notes">
+									Emulator to tylko emulator. Wyniki beda sie w mniejszym lub wiekszym stopniu pokrywaly z tym jak nasza aplikacja zachowa sie na prawdziwym
+									urzadzeniu. Wiekszosc urzadzen sprzedawanych obecnie ma nakladki producentow a nie czystego androida, dziwne domyslne aplikacje, rozne sterowniki
+									do wbudowanych sensorow, kamery, maja lub nie maja zewnetrznej karty sd trudno jest okreslic czy te same testy przejda jesli wykonamy je
+									na przwdziwych urzadzeniach. Poza tym na emulatorze nie przetestujemy wydajnosci aplikacji czy temperatury pod obciazeniem
+									</aside>-->
 								  </div>
 
 								  <div style="text-align: right; float: right;">
@@ -160,30 +253,79 @@
 
 								  <div style="text-align: left; float: right;">
 										<h3>✓ reliability</h3>
+										<!--<aside class="notes">
+										</aside>-->
 										<h3>✓ consistence</h3>
+										<!--<aside class="notes">
+										</aside>-->
 										<h3>✓ is a real device</h3>
+										<!--<aside class="notes">
+										</aside>-->
 										<h3><br></h3>
 										<h3>✗ cost</h3>
-								    <!-- more Elements -->
+										<!--<aside class="notes">
+										Urzadzenia sa drogie. Za drogie. iPhone 7 kosztuje okolo 700$ w zaleznosci od wersji. Galaxy s8 tyle samo. A takich urzadzen
+										zeby przetestowac chociaz ulamek mozliwych konfiguracji bedziemy potrzebowac duzo, duzo wiecej. Oczywiscie nalezy
+										tutaj zwrocic uwage na siatke fragmentacji urzadzen w rejonach w ktore celujemy z nasza aplikacja i wybrac najpopularniejsze
+										ale i tak bedzie to kosztowna zabawa. Poza tym telefony trzeba gdzies trzymac, kontrolowac do nich dostep, utrzymywac, od pracy pod
+										obciazeniem 24/7 beda sie psuc, co jakis czas trzeba dokupowac nowe bo Samsung i Apple narzucaja chore tempo i co roku wypluwaja niewiadomo
+										ile nowych telefonow, rosnie popularnosc chinczykow ktorych tez jest cala masa, kazdy z innym OEMem.
+										</aside>-->
 								  </div>
-
-
 							</section>
 				</section>
 				<!-- Slide -->
 				<section>
 							<section>
 			          <h2>Cloud</h2>
+								<!--<aside class="notes">
+								I co teraz. Jesli na powaznie myslimy o automatyzacji na wieksza skale prawdopopdobnie najlepszym rozwiazaniem bedzie chmura.
+								Za "niewielka oplata" przerzucamy odpowiedzialnosc za urzadzenia na firme zewnetrzna a przerzucanie odpowiedzialnosci na innych to
+								jest to co korporacje lubia najbardziej. Otrzymujemy dostep do duzej liczby fizycznych urzadzen a placimy tylko za czas kiedy testujemy.
+								Biorac pod uwage ze za cene i Galaxy s8 mozna dostac 78 godzin testow na AWSie albo 3 miesiace nielimitowanego dostepu warto taka
+								opcje wziac pod uwage.
+								</aside>-->
 			        </section>
 							<section>
 								<img src="img/cloud/aws.png" style="background-color: transparent; border:none; width: 200px; box-shadow:none; vertical-align:middle; margin:10px">
-			          <img src="img/cloud/firebase.png" style="background-color: transparent; border:none; width: 300px; box-shadow:none; vertical-align:middle; margin:10px">
+								<!--<aside class="notes">
+								AWS Device farm - dostepne prawie 400 urzadzen, obsluguje wiekszosc popularnych frameworkow (chyba wszystkie z tych ktore wyminilem).
+								Mozna sobie zalozyc konto i dostaniemy 1000 darmowych minut, potem 0.17$ za minute albo jakies 250$ za miesiac bez limitu (za 1 slot).
+								Za 200$ misiecznie mozna dorzucic wlasne prywatne urzadzenia.
+								</aside>-->
+								<img src="img/cloud/firebase.png" style="background-color: transparent; border:none; width: 300px; box-shadow:none; vertical-align:middle; margin:10px">
+								<!--<aside class="notes">
+								Firebase Test Lab dla Androida - czesc platformy Firebase ktora oprocz TestLaba oferuje baze danych, hosting, cloud storage,
+								autentykacje itp w ramach jednego abonamentu. Sam test lab obsluguje tylko Androida - Espresso i UIAutomatora,
+								jest zintegrowany z Android Studio. Mozna zalozycz darmowe konto na ktorym dostepne jest 10 testow na wirtualnych i 5 na pzawdziwych
+								urzadzeniach dziennie. Niewiele, ale za darmo + inne benefity wiec jesli ktos jest nastawiony tylko na Androida to warto sprawdzic.
+								Domyslnym planem jest pay as you go gdzie placimy 1$ za godzine wirtualnych i 5$ za prawdziwe urzadzenia.
+								</aside>-->
 			          <img src="img/cloud/saucelabs.png" style="background-color: transparent; border:none; width: 300px; box-shadow:none; vertical-align:middle; margin:10px">
+								<!--<aside class="notes">
+								Saucelabs - maja okolo 1000 urzadzen, obsluguja Appium i Espresso + manualny dostep. Najtanszy plan umozliwiajacy automatyzacje
+								kosztuje 149$ za miesiac i obejmuje 1000 minut i 2 watki.
+								</aside>-->
 			          <img src="img/cloud/testdroid.png" style="background-color: transparent; border:none; width: 160px; box-shadow:none; vertical-align:middle; margin:20px">
+								<!--<aside class="notes">
+								Testdroid cloud - ponad 1000 urzadzen, obsluguje wlasciwie wszystkie frameworki. Nie ma darmowej opcji, zaczyna sie od 99$ za 1000 minut
+								za to z nielimitowana rownolglascia. Po zuzyciu 0.17$ za minute
+								</aside>-->
 			          <img src="img/cloud/xamarin.png" style="background-color: transparent; border:none; width: 150px; box-shadow:none; vertical-align:middle; margin:20px">
+								<!--<aside class="notes">
+								Xamarin test cloud - Xamarin jest frameworkiem do pisania cross-platformowych aplikacji w C# i Visual studio i w ramach uslug "na okolo"
+								oferuje tez chmure z urzadzeniami. Dostepny jest darmowy Trial - 30 dni, 3 rownolgle urzadzenia, 3 godziny dziennie. Oferuje 450 urzadzen
+								i obsluguje Appium, Calabasha, ich nagrywarke i Xamarain.UITest(oparty o Calabasha).
+								</aside>-->
 								<img src="img/cloud/perfecto.png" style="background-color: transparent; border:none; width: 200px; box-shadow:none; vertical-align:middle; margin:10px">
+								<!--<aside class="notes">
+								Perfecto Test Lab - najtanszy plan ktory umozliwia automatyzacje kosztuje 299$ za miesiac. Jest darmowy trial ale tylko manualny.
+								Integracja z Appium i Espreso
+								</aside>-->
 								<img src="img/cloud/experitest.png" style="background-color: transparent; border:none; width: 160px; box-shadow:none; vertical-align:middle; margin:10px">
-
+								<!--<aside class="notes">
+								Experitest Device Lab - jest trial na 10 godzin na dostep do labu, obsluguje Appium i ich framework.
+								</aside>-->
 							</section>
 				</section>
 				<!-- Slide -->
@@ -225,11 +367,46 @@
 								<img src="img/appium_logo.png" style="background-color: transparent; border:none; width: 200px; box-shadow:none; vertical-align:middle; margin:10px">
 								<img src="img/calabash_logo.png" style="background-color: transparent; border:none; width: 200px; box-shadow:none; vertical-align:middle; margin:10px">
 								<img src="img/seetest_logo.png" style="background-color: transparent; border:none; width: 200px; box-shadow:none; vertical-align:middle; margin:10px">
-			        </section>
+								<!--<aside class="notes">
+								Frameworki ktore beda nas najbardziej interesowac czyli crossplatformowe.
+
+								Calabash - opensourceowy framework oparty o idee BDD, obslugije zarowno natywne jak i hybrydowe i webowe apki.
+								testy piszemy w Cucumberze/Gherkinie. Ma spora baze gotowych stepow z ktorych mozemy poskladac podstawowe testy. Nowe stepy mozemy
+								dopisywac w Ruby. Jego popularnosc wynika glownie z tego ze pozwala osobom malo technicznym pisac testy bo baza wbudowanych stepow pokrywa
+								sporo funkcjonalnosci i jesli nie potrzebujemy bardzo zaawansowanych metod nigdy nwaet nie napiszemy linijki kodu. Pod maska Clabash opiera
+								sie na serwerze HTTP ktory jest instalowany na urzadzeniu obok apki (na Androidzie) albo wkompilowywany bezposrednio w aplikacje na iOs.
+								Serwer jest wlasciwie wrapperem na Robotium w przypadku Androida, na iOs zapewnia komunikacje z UIAutomation. Niestety w przypadku iOS
+								musimy miec dostep do kodu albo specjalnie przygotowane .pod. Na Androidzie wystarczy apk. Calabash nie jest juz aktywnie rozwijany
+								i ma "umiarkowanie" aktywne community. Zainteresowanym polecam wejsc na githuba projektu jest tam calkiem niezle readme
+
+								Appium - wisienka na torcie, mozna powiedziec ze standard do ktorego porownywane sa inne frameworki. Jego niewatpliwa zaleta jest
+								to, ze jesli umiemy sie poruszac w Selenium - mozemy z marszu zaczac automatyzowac w Appium. Appium opiera sie na tym samym koncepcie
+								 - WebDriver, architektura klient - serwer z klientami dostepnymi dla wszystkich popularnych jezykow (Ruby, Python, Java, JavaScript,
+								 PHP, C#) + server Appium  w Node.js. Klient wysyla restowe zapytanie do serwera (JSON Wire), serwer tlumaczy je na natywne komendy
+								 dla danej platformy (UI Automation alb UI Automator/Selendroid), wyniki wracaja ta sama droga do nas. Zamiast selenium grida mamy Appium grid
+								 czyli ten sam koncept w wydaniu mobile. W takiego grida mozemy wpinac emulatory albo przwdziwe urzadzenia z tym ze jeden Mac
+								 moze obslugiwac jedno urzadzenie (takie ograniczenie platformy). Dzieki temu tez Appium bardzo latwo integruje sie z chmura bo
+								 wystarczy wpisac adres zewnetrznego Grida i to wlasciwie tyle. Appium moze automatyzowac zarowno natywne jak i hybrydowe plikacje.
+								 Jest opensourcowy, ma calkiem aktywne community. Nie potrzebujemy kodu aplikacji zeby automatyzowac, wystarczy pod/apk.
+
+								 SeeTest - honorable mention, platny (i to calkiem slono). W zalozeniach bardzo podobny do Appium ma kilka ficzerow ktorych brakuje w
+								 w Appium jak np rozpoznawanie tkstu i obrazu "out of the box" gdzie w Appium musimy sobie to sami dopisac z uzywajaca zewnetrznych
+								 bibliotek. Oferuje podobne rozwiazania jak Appium - prywatny/publiczny cloud bardzo podobny do grida, dowolnosc wyboru frameworka
+								 testowego ale ograniczony do Javy
+								</aside>-->
+						  </section>
 							<!-- Slide -->
 							<section>
 			          <img src="img/tools-trend-alpha.png" style="background-color: transparent; border:none; width: 1600px; box-shadow:none; vertical-align:middle; margin:10px">
-			        </section>
+								<!--<aside class="notes">
+									W takim razie w czym automatyzowac? Odpowiedz brzmi jak zwykle "to zalezy".To jest wykres z tego roku pokazujacy
+									z jakich frameworkow korzystali uzytkownicy chmury BitBara. Jak widac lwia czesc dla obu platform stanowi Appium+Calabash
+									(w okolicach 50% z wyrazna przewaga Appium). Na podstawie tego czy nasza apka jest dostepna na obu platformach czy tylko
+									na wybranej, czy interesuja nas bardziej testy blackboxowe czy whiteboxowe, jak bardzo komfortowo czujemy sie w danym jezyku
+									programowania itp. Ja polecam pobawic sie Appium - jest duzo materialow na ten temat w necie, z instrukcjami ktok po kroku jak
+									skonfigurowac srodowisko, gotowe instalacje w Dokerze, StackOverflow pomoze
+								</aside>-->
+							</section>
 				</section>
 				<!-- Slide -->
         <section data-background="img/question.png" data-background-size="512px">
