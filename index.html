@@ -97,63 +97,102 @@
 							<section>
 			          <h2>Localization</h2>
 								<!--<aside class="notes">
+								Jesli nasza aplikacja wydawana jest tylko w jednym jezyku - nie ma problemu. Oczywiscie narazamy sie na komentarze w stylu
+								"Co to ma byc, czamu nie ma wersji po Finsku. Odinstalowuje!". Jesli jednak nasza aplikacja ma trafic na rynek miedzynarodowy
+								i jest przetlumaczona na kilka jezykow powinnismy sprawdzic czy lokalizacja rzeczywiscie dziala, czy zamiast chinskich zankow nie
+								wyswietlaja sie biale kwadraty, czy przetlumaczony tekst miesci sie tabelkach, czy zmienil sie format daty itp,
 								</aside>-->
 								<h2>Date</h2>
 								<!--<aside class="notes">
+								Co sie stanie jesli mamy niepoprawnie ustawiana date w systemie? Sa graje ktre korzystaja z innych kalendarzy. Co wtedy?
+								Czy np timestampy sa zapisywane poprawnie.
 								</aside>-->
 								<h2>Time</h2>
 								<!--<aside class="notes">
+								Co sie stanie przy zmianie strefy czasowej? Z telefonem czesto latamy samolotem, wlaczamy tryb samolotowy, czas sie nie aktualizuje
+								Robimy cos w naszej aplikacji w trybie offline, wylaczamy tryb samolotowy. Co sie stanie?
 								</aside>-->
 			        </section>
 							<!-- Slide -->
 							<section>
 			          <h2>Networking</h2>
 								<!--<aside class="notes">
-								</aside>-->
-			        </section>
-							<!-- Slide -->
-							<section>
-			          <h2>Behavior under stress</h2>
-								<!--<aside class="notes">
-								</aside>-->
-			        </section>
-							<!-- Slide -->
-							<section>
-			          <h2>Interruptions</h2>
-								<!--<aside class="notes">
-								</aside>-->
-			        </section>
-							<!-- Slide -->
-							<section>
-			          <h2>Security</h2>
-								<!--<aside class="notes">
+								Nasza aplikacja prawdopodobnie laczy sie z siecia. Jak bedzie sie zachowywala kiedy nagle tej sieci zabraknie? Jak bedzie dzialala
+								na szybkim/wolnym WiFi, jak na danych pakietowych 3G, jak na LTE. Jak dziala na bardzo niestabilnym polaczeniu? Czy wyswietlamy
+								alerty o braku polaczenia czy nasza aplikacja po prostu sie wykrzacza? Czy mamy tiemouto ustawion na sensowne wartosci?
 								</aside>-->
 			        </section>
 							<!-- Slide -->
 							<section>
 			          <h2>Performance</h2>
 								<!--<aside class="notes">
+								Wydajnosc. Wolne aplikacje szybko laduja w koszu hehe. Wypadalo by wiec przetestowacjak szybko nasza aplikacja sie uruchamia
+								i jak dlugo zamyka. Zmierzyc czasy dzialania kluczowych funkcjonalnosci, wyszukiwarek, zmiany ustawien, responsywnosci przy
+								duzej liczbie wyswietlanych elementow. Jesli testujemy aplikacje 3D sprawdzic ilosc klatek na sekunde w kluczowych
+								momentach, najlepiej na roznych wersjach OpenGl
+								</aside>-->
+			        </section>
+							<!-- Slide -->
+							<section>
+			          <h2>Behavior under stress</h2>
+								<!--<aside class="notes">
+								Jaki wplyw nasza plikacja ma na obciazenie urzadzenia i jaki wplyw obciazenie ma na nasza aplikacje. Jak szybko drenujemy baterie
+								nie robiac nic a jak kiedy mamy eskplozje i lasery na ekranie. Czy urzadzenie sie nie przegrzewa? Czy nie wycieka nam pamiec
+								kiedy zaczniemy wyswietlac 100.000 obrazkow, czy nie dostajemy Out of Memory
+								</aside>-->
+			        </section>
+							<!-- Slide -->
+							<section>
+			          <h2>Interruptions</h2>
+								<!--<aside class="notes">
+								Niekonczaca sie opowiesc. Smartfony dawno juz przestaly sluzycz tylko do dzwonienia czy wysylania smsow jednak podobno niektorzy jeszcze
+								to robia. Co sie stanie z nasza aplikacja kiedy uzytkownikowi zadzwoni telefon? Kiedy przyjdzie sms? Email? Notyfikacja z mesendzera?
+								Co jesli wcisniemy home? Co jesli wyskoczy nam jakis alert systemowy, np aktualizacja? Co jesli przelaczymy sie na moment do innej aplikacji
+								a potem wrocimy do naszej? Co jesli rozladuje sie nam telefon?
+								</aside>-->
+			        </section>
+							<!-- Slide -->
+							<section>
+			          <h2>Security</h2>
+								<!--<aside class="notes">
+								Tym prawdoopdobnie bedzie sie zajmowal wyspecjalizowany zespol ale w scenariuszach do automatyzacji mozemy sprawdzic czy np hasla
+								sa zagwiazdkowane. Czy przypomnienie hasla przysyla emaile. Co sie stanie kiedy wpiszemy nieporawne haslo? Login? Czy nasza aplikacja
+								zapisuje jakies poufne dane na dysku?
 								</aside>-->
 			        </section>
 							<!-- Slide -->
 							<section>
 			          <h2>Usability</h2>
 								<!--<aside class="notes">
+								Testy uzytecznosci aplikacji ciezko zautomatyzowac bo jest to czesto subiektywne udczucie uzytkownika. Ale sporo rzeczy jestesmy w stanie
+								sprawdzic, nawet mimochodem mierzac poprostu czasy wykonania poszczegolnych operacji. Ile zajmuje aplikacji od klikniecia do otwarcia
+								nowego ekranu? Ile zajmuja najczestsze operacje? Ile zajmuja skomplikowane operacje? Czy wyswietlamy jakies informacje o tym ze trwa dluzsza
+								akcja? Do 0.1 Sekundy uzytkownik czuje ze aplikacja odpowiada natychmiast, do 1 sekundy nie potrzebujemy feedbacku, 10 sekund to max czas
+								skupienia jakiego mozemy oczekiwac od uzytkownika jesli damy mu wczesniej feedback o wykonywanej akcji. Kazdy moment powyzej tych
+								10 sekund moze oznaczac ze uzytkownik przelaczy sie na inna aplikacje a do naszej juz nie wroci.
 								</aside>-->
 			        </section>
 							<!-- Slide -->
 							<section>
 			          <h3>Resolution</h3>
 								<!--<aside class="notes">
+								Oczywiscie wszystko musimy przetestowac w ldpi, mdpi, hdpi, xhdpi, xxhdpi. Czy nasze assety wyswietlaja sie poprawnie i czy nasz layout sie nie
+								rozjezdza
 								</aside>-->
 								<h3>Orientation</h3>
 								<!--<aside class="notes">
+								Czy nasza apka obsluguje rozne polozenia ekranu? Tak. To do roboty. Wszystkie testy x2.
 								</aside>-->
 								<h3>Sensors</h3>
 								<!--<aside class="notes">
+								Wspomniany na poczatku GPS, barometr i wysokosciomierz. Jesli nasza aplikacja opiera sie na wykorzystaniu sensorow trzeba je przetestowac!
 								</aside>-->
 								<h3>Certification</h3>
 								<!--<aside class="notes">
+								Jesli chcemy zeby nasza aplikacja zalapala sie do promowanych (a przeciez chcemy) musie spelniac zestaw zasad ustalonych przez
+								wlasciciela sklepu (np czy home zawsze wraca do ekranu startowego? czy wszystkie alerty da sie zamknac przyciskiem wstecz? czy
+								nasz przycisk wstecznie ma jakis niestandardowych efektow ubocznych?). W przypadku Apple jesli chcemy zeby nasza apka wogole sie
+								w sklepie ukazala trzeba odchaczyc cala liste wymagan.
 								</aside>-->
 			        </section>
 							<!-- Slide -->
@@ -168,6 +207,8 @@
 							<section>
 			          <h2>Fragmentation</h2>
 								<!--<aside class="notes">
+								Co jest najwiekszym koszmarem automatyzacji mobilnej? Fragmentacja. Ilosc urzadzen dostepnych na rynku jest niewiarygodna a co roku pojawiaja
+								sie nowe szybko zastepujace starsze modele wiec siatka fragmentacji co rok sie zmienia. Kos chce strzelic liczbe unikatowych urzadzen?
 								</aside>-->
 			        </section>
 							<!-- Slide -->
@@ -181,14 +222,18 @@
 			        </section>
 							<!-- Slide -->
 							<section>
-			          <img src="img/chart.png" style="background-color: transparent; border:none; width: 800px; box-shadow:none">
+								<img src="img/a-numbers.png" style="background-color: transparent; border:none; width: 250px; box-shadow:none">
+			          <img src="img/chart.png" style="background-color: transparent; border:none; width: 600px; box-shadow:none">
 								<!--<aside class="notes">
+								Android - nieciekawie. Wersje androida potrafia sie dramatycznie roznic od siebie. A do tego dochadza jeszcze nakladki
+								producentow, custom romy, rootowane telefony
 								</aside>-->
 			        </section>
 							<!-- Slide -->
 							<section>
 			          <img src="img/ios_fragmentation2.png" style="background-color: transparent; border:none; width: 400px; box-shadow:none">
 								<!--<aside class="notes">
+								W przypadku iOSa jest niezle. Wiekszosc urzadzen dziala na 9+. Ale jesienia wychodzi 11 i zobaczymy co sie stanie z tym wykresem.
 								</aside>-->
 			        </section>
 				</section>
