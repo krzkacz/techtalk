@@ -255,7 +255,7 @@
 									niezawodnosc i wygode pisania testow). Espresso ma mniesze API (obsluguje Hamcresta), zapewnia lepsza synchronizacje z UI (nie wymaga
 									sleepow ktore	z zasady sa brzydkie i niestabilne). Espresso jest ograniczone do automatyzowanej aplikacji i nie ma dostepu do np.
 									UI systemu takigo jak dialogi, belka itp. Tu pojawia sie UI Automator (API 18+ 4.3) ktory te rzeczy jest w stanie obsluzyc
-									i mozna go laczyc z Espresso bez problemu. Ma UIAutomatorViwer do podgladania aktualnie wyswietlanych elementow i goglnie bardziej
+									i mozna go laczyc z Espresso bez problemu. Ma UIAutomatorViewer do podgladania aktualnie wyswietlanych elementow i ogolnie bardziej
 									nadaje sie do Black Boxowych testow.
 								</aside>
 			        </section>
@@ -264,10 +264,11 @@
 								<img src="img/xctest_logo.png" style="background-color: transparent; border:none; width: 200px; box-shadow:none; vertical-align:middle; margin:10px">
 			          <img src="img/uiautomation-icon.png" style="background-color: transparent; border:none; width: 200px; box-shadow:none; vertical-align:middle; margin:10px">
 								<aside class="notes">
-									iOS. XCUITest jest w pewnym sesie nastepca UIAutomation (nazwa ludzaco podobna do UI Automatora z Androida)
-									XCUITest to kombinacja frameworkow XCTest i Accesibility ktory zapewnia obsloge interakcji z UI. XCUITest dziala na iOS 9+
+									iOS. Tu mamy do wyboru UIAutomation (nazwa ludzaco podobna do UI Automatora z Androida) gdzie piszemy testy w Javascripcie
+									albo XCUITest ktory jest w pewnym sesie jego nastepca XCUITest to kombinacja frameworkow XCTest i Accesibility ktory
+									zapewnia obsluge interakcji z UI. XCUITest dziala na iOS 9+
 									ale nie jest to specjalny problem biorac pod uwage wykres ktory pokazywalem wczesniej gdzie udzial systemow ponizej 9 jest
-									na poziomie kolo 3%. Testy pisane w Swifcie a nie w JavaScripcie. XCUITest zapewnia latwiejsza obsluge
+									na poziomie kolo 3%. Testy pisane sa w Swifcie albo ObjectiveC. XCUITest zapewnia latwiejsza obsluge
 									alertow, latwiejsze generowanie testow z nagrywarki, lepsza synchronizacje i jest generalnie szybsze niz UIAutomation.
 									UIAutomation jest deprecated od XCode 7? Jest tez KIF czy EarlGrey(rozwijany przez Google) ktore sa frameworkami bazujacymi
 									na XCTest (bo musza)
